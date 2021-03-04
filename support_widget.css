@@ -1,0 +1,140 @@
+#batworld {
+  font-family: "Roboto", sans-serif, "Solaimanlipi", Arial !important;
+  cursor: pointer;
+}
+.batworld-hidden {
+  display: none;
+}
+.flex-container {
+  display: flex;
+  align-items: stretch;
+}
+.satisfied {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.cancel {
+  width: 25px;
+  height: 25px;
+}
+#main-icon {
+  position: fixed;
+  left: 100px;
+  bottom: 100px;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #00f;
+  width: 65px;
+  height: 65px;
+  border-radius: 65px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 99999;
+  transition: width 0.5s linear;
+}
+#main-icon:hover {
+  transition: width 0.5s linear;
+  width: 250px;
+}
+#main-icon img {
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
+}
+#main-icon p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+#rate-your-exp {
+  position: fixed;
+  left: 150px;
+  bottom: 170px;
+  border-radius: 10px;
+  width: 320px;
+  height: 200px;
+  padding: 5px;
+  background-color: #eee;
+  border: 2px solid #333;
+  text-align: center;
+  align-items: center;
+  z-index: 99999;
+}
+#imotion img {
+  width: 55px;
+  height: 55px;
+}
+#imotion img:hover {
+  width: 70px;
+  height: 70px;
+  transition: width 0.1s ease-in-out;
+}
+#thank-you {
+  position: fixed;
+  left: 150px;
+  bottom: 170px;
+  border-radius: 10px;
+  width: 300px;
+  height: 60px;
+  background-color: #eee;
+  border: 2px solid #333;
+  text-align: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 25px;
+}
+#thank-you h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+#tell-us-more {
+  position: fixed;
+  left: 150px;
+  bottom: 170px;
+  border-radius: 10px;
+  width: 320px;
+  min-height: 100px;
+  height: auto;
+  background-color: #fff;
+  border: 2px solid #333;
+  text-align: left;
+  z-index: 99999;
+  padding-bottom: 15px;
+}
+#tell-us-more-header {
+  width: 300px;
+  height: 40px;
+  background-color: #00f;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+#tell-us-more-header h3 {
+  margin-right: 35px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+#tell-us-more label,
+#tell-us-more input,
+#tell-us-more textarea {
+  margin: 4px 10px;
+}
+.form-field {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #666;
+  border-radius: 5px;
+}

@@ -4,7 +4,8 @@ supportWidgetCss.setAttribute('rel', 'stylesheet');
 supportWidgetCss.setAttribute('href', './support_widget.css');
 document.head.appendChild(supportWidgetCss);
 
-var html = `
+//html variable
+var batworldhtml = `
 <!-- Help us improve -->
 <div id="batworld-main-icon">
   <img src="icon/smile.png" class="smile" alt="help us" />
@@ -111,7 +112,7 @@ var html = `
   />
 </div>
 `;
-document.getElementById("batworld").innerHTML = html;
+document.getElementById("batworld").innerHTML = batworldhtml;
 
 //Functions
  function imotionClick(){

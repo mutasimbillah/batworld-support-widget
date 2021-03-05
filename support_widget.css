@@ -2,23 +2,20 @@
   font-family: "Roboto", sans-serif, "Solaimanlipi", Arial !important;
   cursor: pointer;
 }
-.batworld-hidden {
-  display: none;
-}
-.flex-container {
+.batworld-flex-container {
   display: flex;
   align-items: stretch;
 }
-.satisfied {
+.batworld-satisfied {
   margin-top: 20px;
   font-size: 14px;
   font-weight: 700;
 }
-.cancel {
+.batworld-cancel {
   width: 25px;
   height: 25px;
 }
-#main-icon {
+#batworld-main-icon {
   position: fixed;
   left: 100px;
   bottom: 100px;
@@ -33,16 +30,16 @@
   z-index: 99999;
   transition: width 0.5s linear;
 }
-#main-icon:hover {
+#batworld-main-icon:hover {
   transition: width 0.5s linear;
   width: 250px;
 }
-#main-icon img {
+#batworld-main-icon img {
   width: 45px;
   height: 45px;
   margin-top: 10px;
 }
-#main-icon p {
+#batworld-main-icon p {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
@@ -124,7 +121,7 @@
 #tell-us-more textarea {
   margin: 4px 10px;
 }
-.form-field {
+.batworld-form-field {
   display: block;
   width: 100%;
   max-width: 270px;

@@ -6,145 +6,149 @@ document.head.appendChild(supportWidgetCss);
 
 //html variable
 let batworldhtml = `
+<div id="batworld">
+<!--All html inject here-->
 <!-- Support -->
 <div id="support-icon" style="left: 50px; bottom: 30px;">
-  <img src="icon/u25.png" alt="WhatsApp" />
-  <p>সাহায্য</p>
+<img src="icon/u25.png" alt="WhatsApp" />
+<p>সাহায্য</p>
 </div>
 <!-- কল -->
 <div id="batworld-minimize" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 590px;">
-  <img src="icon/minimize-2.png"  alt="WhatsApp" />
-  <p>মিনিমাইজ</p>
+<img src="icon/minimize-2.png"  alt="WhatsApp" />
+<p>মিনিমাইজ</p>
 </div>
 <!-- কল -->
 <div id="batworld-call" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 520px;">
-  <img src="icon/u25.png"  alt="call" />
-  <p>কল</p>
+<img src="icon/u25.png"  alt="call" />
+<p>কল</p>
 </div>
 <!-- ইমেল -->
 <div id="batworld-email" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 450px;">
-  <img src="icon/u19.png"  alt="email" />
-  <p>ইমেল</p>
+<img src="icon/u19.png"  alt="email" />
+<p>ইমেল</p>
 </div>
 <!-- স্কাইপ -->
 <div id="batworld-skype" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 380px;">
-  <img src="icon/u16.png"  alt="skype" />
-  <p>স্কাইপ</p>
+<img src="icon/u16.png"  alt="skype" />
+<p>স্কাইপ</p>
 </div>
 <!-- WhatsApp -->
 <div id="batworld-whatsapp" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 310px;">
-  <img src="icon/u13.png"  alt="WhatsApp" />
-  <p>হোয়াটসঅ্যাপ</p>
+<img src="icon/u13.png"  alt="WhatsApp" />
+<p>হোয়াটসঅ্যাপ</p>
 </div>
 <!-- মেসেঞ্জার -->
 <div id="batworld-messenger" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 240px;">
-  <img src="icon/u7.png"  alt="messenger" />
-  <p>মেসেঞ্জার</p>
+<img src="icon/u7.png"  alt="messenger" />
+<p>মেসেঞ্জার</p>
 </div>
 <!-- Help us improve -->
 <div id="batworld-feedback" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 170px;">
-  <img src="icon/smile.png"  alt="feedback" />
-  <p>ফিডব্যাক</p>
+<img src="icon/smile.png"  alt="feedback" />
+<p>ফিডব্যাক</p>
 </div>
 
 <!-- Rate Your Experience -->
 <div hidden id="rate-your-exp">
-  <div class="batworld-flex-container">
-    <div style="flex-grow: 2">
-      <h3>Rate Your Experience</h3>
-    </div>
-    <div style="flex-grow: 1; text-align: right" onclick="rateYourExp()">
-      <img src="icon/cancel_black.png" class="batworld-cancel" alt="Cancel"  />
-    </div>
-  </div>
-  <div id="imotion">
-    <img
-      src="icon/horrible.png"
-      alt="horrible"
-      onclick="imotionClick()"
-    />
-    <img src="icon/poor.png" alt="poor" onclick="imotionClick()" />
-    <img src="icon/avg.png" alt="average" onclick="imotionClick()" />
-    <img src="icon/good.png" alt="good" onclick="imotionClick()" />
-    <img
-      src="icon/excellent.png"
-      alt="excellent"
-      onclick="imotionClick()"
-    />
-  </div>
-  <div class="batworld-flex-container">
-    <div style="flex-grow: 2; text-align: left" class="batworld-satisfied">
-      NOT SATISFIED
-    </div>
-    <div style="flex-grow: 1; text-align: right" class="batworld-satisfied">
-      VERY SATISFIED
-    </div>
-  </div>
+<div class="batworld-flex-container">
+<div style="flex-grow: 2">
+<h3>Rate Your Experience</h3>
+</div>
+<div style="flex-grow: 1; text-align: right" onclick="rateYourExp()">
+<img src="icon/cancel_black.png" class="batworld-cancel" alt="Cancel"  />
+</div>
+</div>
+<div id="imotion">
+<img
+src="icon/horrible.png"
+alt="horrible"
+onclick="imotionClick()"
+/>
+<img src="icon/poor.png" alt="poor" onclick="imotionClick()" />
+<img src="icon/avg.png" alt="average" onclick="imotionClick()" />
+<img src="icon/good.png" alt="good" onclick="imotionClick()" />
+<img
+src="icon/excellent.png"
+alt="excellent"
+onclick="imotionClick()"
+/>
+</div>
+<div class="batworld-flex-container">
+<div style="flex-grow: 2; text-align: left" class="batworld-satisfied">
+NOT SATISFIED
+</div>
+<div style="flex-grow: 1; text-align: right" class="batworld-satisfied">
+VERY SATISFIED
+</div>
+</div>
 </div>
 <!--Thank you-->
 <div hidden id="thank-you">
-  <div class="batworld-flex-container">
-    <div style="flex-grow: 1; text-align: left">
-      <img src="icon/smile.png" width="55px" height="55px" alt="" />
-    </div>
-    <div style="flex-grow: 3; text-align: left">
-      <h3>Thank You!! Tell us more</h3>
-    </div>
-  </div>
+<div class="batworld-flex-container">
+<div style="flex-grow: 1; text-align: left">
+<img src="icon/smile.png" width="55px" height="55px" alt="" />
+</div>
+<div style="flex-grow: 3; text-align: left">
+<h3>Thank You!! Tell us more</h3>
+</div>
+</div>
 </div>
 <!--Tell us more-->
 <div hidden id="tell-us-more">
-  <div id="tell-us-more-header">
-    <div class="batworld-flex-container">
-      <div style="flex-grow: 2; text-align: right">
-        <h3>Tell us more</h3>
-      </div>
-      <div style="flex-grow: 1; text-align: right" onclick="closeTellUs()">
-        <img src="icon/cancel.png" class="batworld-cancel" alt="Cancel" />
-      </div>
-    </div>
-  </div>
-  <label>What did you like most?</label>
-  <textarea
-    name="text_field"
-    rows="3"
-    placeholder="Tell us your experience (optional)"
-    class= "batworld-form-field"
-  ></textarea>
-  <label>What did you like least?</label>
-  <textarea
-    name="text_field"
-    rows="3"
-    placeholder="Tell us your experience (optional)"
-    class="batworld-form-field"
-  ></textarea>
-  <label for="email" 
-    >Your email<b><span style="color: red">*</span></b></label
-  >
-  <input
-    name="email"
-    type="email"
-    placeholder="Your email address (Required)"
-    required=""
-    class="batworld-form-field"
-  />
-  <label for="mobile" 
-    >Mobile No</span></b></label
-  >
-  <input
-    name="mobile"
-    type="mobile"
-    placeholder="Your Mobile No (optional)"
-    class="batworld-form-field"
-  />
+<div id="tell-us-more-header">
+<div class="batworld-flex-container">
+<div style="flex-grow: 2; text-align: right">
+  <h3>Tell us more</h3>
 </div>
- <!-- টিকেট  -->
- <div id="batworld-ticket" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 100px;">
-  <img src="icon/u37.png"  alt="help us" />
-  <p>টিকেট</p>
+<div style="flex-grow: 1; text-align: right" onclick="closeTellUs()">
+  <img src="icon/cancel.png" class="batworld-cancel" alt="Cancel" />
 </div>
+</div>
+</div>
+<label>What did you like most?</label>
+<textarea
+name="text_field"
+rows="3"
+placeholder="Tell us your experience (optional)"
+class= "batworld-form-field"
+></textarea>
+<label>What did you like least?</label>
+<textarea
+name="text_field"
+rows="3"
+placeholder="Tell us your experience (optional)"
+class="batworld-form-field"
+></textarea>
+<label for="email" 
+>Your email<b><span style="color: red">*</span></b></label
+>
+<input
+name="email"
+type="email"
+placeholder="Your email address (Required)"
+required=""
+class="batworld-form-field"
+/>
+<label for="mobile" 
+>Mobile No</span></b></label
+>
+<input
+name="mobile"
+type="mobile"
+placeholder="Your Mobile No (optional)"
+class="batworld-form-field"
+/>
+</div>
+<!-- টিকেট  -->
+<div id="batworld-ticket" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 100px;">
+<img src="icon/u37.png"  alt="help us" />
+<p>টিকেট</p>
+</div>
+</div>
+<!--import script under this div-->
 `;
-document.getElementById('batworld').innerHTML = batworldhtml;
+document.body.innerHTML = document.body.innerHTML + batworldhtml; 
 
 /*-----------------------batworld-call------------------------------------*/
  //Hover Effect

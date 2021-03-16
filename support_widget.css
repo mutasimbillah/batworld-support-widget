@@ -81,8 +81,8 @@
 }
 #rate-your-exp {
   position: fixed;
-  left: 200px;
-  bottom: 170px;
+  left: 150px;
+  bottom: 100px;
   border-radius: 10px;
   width: 320px;
   height: 200px;
@@ -110,8 +110,8 @@
 }
 #thank-you {
   position: fixed;
-  left: 200px;
-  bottom: 170px;
+  left: 150px;
+  bottom: 100px;
   border-radius: 10px;
   width: 350px;
   height: auto;
@@ -131,8 +131,8 @@
 
 #tell-us-more {
   position: fixed;
-  left: 200px;
-  bottom: 170px;
+  left: 150px;
+  bottom: 80px;
   border-radius: 10px;
   width: 310px;
   min-height: 100px;

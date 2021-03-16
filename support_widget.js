@@ -9,42 +9,47 @@ var batworldhtml = `
     <div id="batworld">
     <!--All html inject here-->
     <!-- Support -->
-    <div id="support-icon" style="left: 50px; bottom: 30px;">
-    <img src="icon/u25.png" alt="WhatsApp" />
+    <div id="support-icon" style="left: 50px; bottom: 25px;">
+    <img src="icon/u25.png" alt="help" />
     <p>সাহায্য</p>
     </div>
     <!-- minimize -->
-    <div id="batworld-minimize" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 590px;">
-    <img src="icon/minimize-2.png"  alt="WhatsApp" />
+    <div id="batworld-minimize" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 520px;">
+    <img src="icon/minimize-2.png"  alt="minimize" />
     <p>মিনিমাইজ</p>
     </div>
     <!-- কল -->
-    <div id="batworld-call" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 520px;">
+    <div id="batworld-call" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 460px;">
     <img src="icon/u25.png"  alt="call" />
     <p>কল</p>
     </div>
     <!-- ইমেল -->
-    <div id="batworld-email" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 450px;">
+    <div id="batworld-email" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 400px;">
     <img src="icon/u19.png"  alt="email" />
     <p>ইমেল</p>
     </div>
     <!-- স্কাইপ -->
-    <div id="batworld-skype" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 380px;">
+    <div id="batworld-skype" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 340px;">
     <img src="icon/u16.png"  alt="skype" />
     <p>স্কাইপ</p>
     </div>
     <!-- WhatsApp -->
-    <div id="batworld-whatsapp" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 310px;">
+    <div id="batworld-whatsapp" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 280px;">
     <img src="icon/u13.png"  alt="WhatsApp" />
     <p>হোয়াটসঅ্যাপ</p>
     </div>
     <!-- মেসেঞ্জার -->
-    <div id="batworld-messenger" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 240px;">
+    <div id="batworld-messenger" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 220px;">
     <img src="icon/u7.png"  alt="messenger" />
     <p>মেসেঞ্জার</p>
     </div>
+    <!-- টিকেট  -->
+    <div id="batworld-ticket" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 160px;">
+    <img src="icon/u37.png"  alt="help us" />
+    <p>টিকেট</p>
+    </div>
     <!-- Help us improve -->
-    <div id="batworld-feedback" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 170px;">
+    <div id="batworld-feedback" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 100px;">
     <img src="icon/smile.png"  alt="feedback" />
     <p>ফিডব্যাক</p>
     </div>
@@ -145,11 +150,6 @@ var batworldhtml = `
     Submit
     </button>
     </form>
-    </div>
-    <!-- টিকেট  -->
-    <div id="batworld-ticket" class="batworld-round-icon batworld-hide" style="left: 50px; bottom: 100px;">
-    <img src="icon/u37.png"  alt="help us" />
-    <p>টিকেট</p>
     </div>
     </div>
 `;
@@ -300,6 +300,75 @@ document.querySelector('#batworld-minimize').addEventListener('click', function(
 });
 /*-----------------------batworld-minimize End------------------------------------*/
 
+
+function adjustPosition(myElement){
+    //console.log(parseInt(myElement.style.bottom,10));
+    myElement.style.bottom = parseInt(myElement.style.bottom,10)-60+"px";
+    //console.log(myElement.style.bottom);
+}
+
+var batworldMinimize = document.querySelector('#batworld-minimize');
+var batworldCall = document.querySelector('#batworld-call');
+var batworldEmail = document.querySelector('#batworld-email');
+var batworldSkype = document.querySelector('#batworld-skype');
+var batworldWhatsapp = document.querySelector('#batworld-whatsapp');
+var batworldMessenger = document.querySelector('#batworld-messenger');
+var batworldTicket = document.querySelector('#batworld-ticket');
+var batworldFeedback = document.querySelector('#batworld-feedback');
+
 //hide call
-document.querySelector('#batworld-call').hidden = true;
-document.querySelector("#batworld-minimize").style.bottom = "520px";
+if(false){
+    batworldCall.hidden = true;
+    adjustPosition(batworldMinimize);
+}
+//hide email
+if(false){
+    batworldEmail.hidden = true;
+    adjustPosition(batworldMinimize);
+    adjustPosition(batworldCall);
+}
+//hide skype
+if(false){
+    batworldSkype.hidden = true;
+    adjustPosition(batworldEmail);
+    adjustPosition(batworldCall);
+    adjustPosition(batworldMinimize);
+}
+//hide whatsapp
+if(false){
+    batworldWhatsapp.hidden = true;
+    adjustPosition(batworldSkype);
+    adjustPosition(batworldEmail);
+    adjustPosition(batworldCall);
+    adjustPosition(batworldMinimize);
+}
+//hide messenger
+if(false){
+    batworldMessenger.hidden = true;
+    adjustPosition(batworldWhatsapp);
+    adjustPosition(batworldSkype);
+    adjustPosition(batworldEmail);
+    adjustPosition(batworldCall);
+    adjustPosition(batworldMinimize);
+}
+//hide ticket
+if(false){
+    batworldTicket.hidden = true;
+    adjustPosition(batworldMessenger);
+    adjustPosition(batworldWhatsapp);
+    adjustPosition(batworldSkype);
+    adjustPosition(batworldEmail);
+    adjustPosition(batworldCall);
+    adjustPosition(batworldMinimize);
+}
+//hide feedback
+if(true){
+    batworldFeedback.hidden = true;
+    adjustPosition(batworldTicket);
+    adjustPosition(batworldMessenger);
+    adjustPosition(batworldWhatsapp);
+    adjustPosition(batworldSkype);
+    adjustPosition(batworldEmail);
+    adjustPosition(batworldCall);
+    adjustPosition(batworldMinimize);
+}

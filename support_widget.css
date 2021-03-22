@@ -190,3 +190,23 @@
   margin-right: 25px;
   cursor: pointer;
 }
+@media only screen and (max-width: 700px) {
+  #tell-us-more {
+    left: 5px !important;
+    bottom: 100px !important;
+    width: 300px !important;
+  }
+  #rate-your-exp {
+    left: 5px !important;
+    bottom: 100px !important;
+    width: 310px !important;
+  }
+  #thank-you {
+    left: 5px !important;
+    bottom: 100px !important;
+    border-radius: 10px;
+    width: 310px !important;
+    height: auto;
+    padding: 5px !important;
+  }
+}

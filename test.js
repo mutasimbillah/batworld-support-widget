@@ -1,7 +1,7 @@
 //  Import CSS
 var supportWidgetCss = document.createElement('link');
 supportWidgetCss.setAttribute('rel', 'stylesheet');
-supportWidgetCss.setAttribute('href', './support_widget.css');
+supportWidgetCss.setAttribute('href', 'https://feedback.oss.net.bd/v2/support_widget.css');
 document.head.appendChild(supportWidgetCss);
 
 //html variable
@@ -9,83 +9,82 @@ var batworldhtml = `
 <div id="batworld">
 <!--All html inject here-->
 <!-- Support -->
-<div id="support-icon" style="left: 20px; bottom: 25px">
-  <img src="icon/u25.png" alt="help" />
+<div id="support-icon" style="left: 50px; bottom: 25px">
+  <img src="https://feedback.oss.net.bd/v2/icon/u25.png" alt="help" />
   <p>সাহায্য</p>
 </div>
 <!-- minimize -->
 <div
   id="batworld-minimize"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 520px"
+  style="left: 50px; bottom: 520px"
 >
-  <img src="icon/minimize-2.png" alt="minimize" />
+  <img src="https://feedback.oss.net.bd/v2/icon/minimize-2.png" alt="minimize" />
   <p>মিনিমাইজ</p>
 </div>
 <!-- কল -->
 <div
   id="batworld-call"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 460px"
+  style="left: 50px; bottom: 460px"
 >
-  <img src="icon/u25.png" alt="call" />
+  <img src="https://feedback.oss.net.bd/v2/icon/u25.png" alt="call" />
   <p>কল</p>
 </div>
 <!-- ইমেল -->
 <div
   id="batworld-email"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 400px"
+  style="left: 50px; bottom: 400px"
 >
-  <img src="icon/u19.png" alt="email" />
+  <img src="https://feedback.oss.net.bd/v2/icon/u19.png" alt="email" />
   <p>ইমেল</p>
 </div>
 <!-- স্কাইপ -->
 <div
   id="batworld-skype"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 340px"
+  style="left: 50px; bottom: 340px"
 >
-  <img src="icon/u16.png" alt="skype" />
+  <img src="https://feedback.oss.net.bd/v2/icon/u16.png" alt="skype" />
   <p>স্কাইপ</p>
 </div>
 <!-- WhatsApp -->
 <div
   id="batworld-whatsapp"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 280px"
+  style="left: 50px; bottom: 280px"
 >
-  <img src="icon/u13.png" alt="WhatsApp" />
+  <img src="https://feedback.oss.net.bd/v2/icon/u13.png" alt="WhatsApp" />
   <p>হোয়াটসঅ্যাপ</p>
 </div>
 <!-- মেসেঞ্জার -->
 <div
   id="batworld-messenger"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 220px"
+  style="left: 50px; bottom: 220px"
 >
-  <img src="icon/u7.png" alt="messenger" />
+  <img src="https://feedback.oss.net.bd/v2/icon/u7.png" alt="messenger" />
   <p>মেসেঞ্জার</p>
 </div>
 <!-- টিকেট  -->
 <div
   id="batworld-ticket"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 160px"
+  style="left: 50px; bottom: 160px"
 >
-  <img src="icon/u37.png" alt="help us" />
+  <img src="https://feedback.oss.net.bd/v2/icon/u37.png" alt="help us" />
   <p>টিকেট</p>
 </div>
 <!-- Help us improve -->
 <div
   id="batworld-feedback"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 100px"
+  style="left: 50px; bottom: 100px"
 >
-  <img src="icon/smile.png" alt="feedback" />
+  <img src="https://feedback.oss.net.bd/v2/icon/smile.png" alt="feedback" />
   <p>ফিডব্যাক</p>
 </div>
-
 <!-- Rate Your Experience -->
 <div hidden id="rate-your-exp">
   <div class="batworld-flex-container">
@@ -94,26 +93,18 @@ var batworldhtml = `
     </div>
     <div style="flex-grow: 1; text-align: right" onclick="rateYourExp()">
       <img
-        src="icon/cancel_black.png"
+        src="https://feedback.oss.net.bd/v2/icon/cancel_black.png"
         class="batworld-cancel"
         alt="Cancel"
       />
     </div>
   </div>
   <div id="imotion">
-    <img
-      src="icon/horrible.png"
-      alt="horrible"
-      onclick="imotionClick('1')"
-    />
-    <img src="icon/poor.png" alt="poor" onclick="imotionClick('2')" />
-    <img src="icon/avg.png" alt="average" onclick="imotionClick('3')" />
-    <img src="icon/good.png" alt="good" onclick="imotionClick('4')" />
-    <img
-      src="icon/excellent.png"
-      alt="excellent"
-      onclick="imotionClick(5)"
-    />
+    <img src="https://feedback.oss.net.bd/v2/icon/horrible.png" alt="horrible" onclick="imotionClick(1)"/>
+    <img src="https://feedback.oss.net.bd/v2/icon/poor.png" alt="poor" onclick="imotionClick(2)" />
+    <img src="https://feedback.oss.net.bd/v2/icon/avg.png" alt="average" onclick="imotionClick(3)" />
+    <img src="https://feedback.oss.net.bd/v2/icon/good.png" alt="good" onclick="imotionClick(4)" />
+    <img src="https://feedback.oss.net.bd/v2/icon/excellent.png" alt="excellent" onclick="imotionClick(5)"/>
   </div>
   <div class="batworld-flex-container">
     <div
@@ -134,7 +125,7 @@ var batworldhtml = `
 <div hidden id="thank-you">
   <div class="batworld-flex-container">
     <div style="flex-grow: 1; text-align: left">
-      <img src="icon/smile.png" width="55px" height="55px" alt="" />
+      <img src="https://feedback.oss.net.bd/v2/icon/smile.png" width="55px" height="55px" alt="" />
     </div>
     <div style="flex-grow: 3; text-align: left">
       <h3>Thank You!! Tell us more</h3>
@@ -152,7 +143,7 @@ var batworldhtml = `
         style="flex-grow: 1; text-align: right"
         onclick="closeTellUs()"
       >
-        <img src="icon/cancel.png" class="batworld-cancel" alt="Cancel" />
+        <img src="https://feedback.oss.net.bd/v2/icon/cancel.png" class="batworld-cancel" alt="Cancel" />
       </div>
     </div>
   </div>
@@ -180,17 +171,71 @@ var batworldhtml = `
       class="batworld-form-field"
       required
     />
-    <button type="button" onclick="formSubmit()" id="batworld-submit-btn" style="float: right">
+    <button type="button" id="batworld-submit-btn" style="float: right">
       Submit
     </button>
   </form>
 </div>
 </div>
 `;
-document.body.innerHTML = document.body.innerHTML + batworldhtml; 
+document.body.innerHTML = document.body.innerHTML + batworldhtml;
 
 /*---------------------API------------------------*/
 
+var apiUrl = 'https://uat-insightdb.oss.net.bd/gateway';
+var appID = '$feedback_clientId';
+var accessToken = '$feedback_accessToken';
+var questions;
+
+async function imotionPost(imoId){
+    console.log("======imoId====== "+imoId)
+    if(imoId === undefined){
+        return;
+    }
+    var feedback = new Object();
+    feedback.clientId = appID;
+    feedback.ratingPoint = parseInt(imoId),
+    feedback.feedbackURL = window.location.href;
+    console.log("======feedback-obj====== "+feedback)
+    var bodyObj = JSON.stringify(feedback);
+    await fetch(apiUrl+'/api/feedback-service/feedbacks/feedback',{
+        method: 'POST',
+        crossDomain: true,
+        body: bodyObj,
+        headers: {
+        'access-token': accessToken,
+        'Content-Type' : 'application/json'
+        }
+    }).then(function (response) {
+        // The API call was successful!
+        if (response.ok) {
+            return response;
+        } else {
+            return Promise.reject(response);
+        }
+    }).then(function (data) {
+        console.log(data.data.id)
+    }).catch(function (err) {
+        // There was an error
+        console.log(err);
+    });
+
+}//imotionPost
+
+function displayQuestion(q){
+    var qhtml = document.getElementById('form-inject');
+    qhtml.innerHTML = '';
+    for(let i=0;i<q.length;i++){
+        //console.log(q[i].question);
+        qhtml.innerHTML += '<label>'+ q[i].question +'</label>';
+        qhtml.innerHTML += `<textarea
+        name="text_field"
+        rows="3"
+        placeholder="(optional)"
+        class="batworld-form-field"></textarea>
+      `;
+    }
+}//displayQuestion
 /*-----------------------API End--------------------*/
 /*-----------------------batworld-call------------------------------------*/
  //Hover Effect
@@ -272,10 +317,14 @@ document.querySelector('#batworld-feedback').addEventListener('mouseleave', func
 
 //Functions
  async function imotionClick(imoId){
-    console.log(imoId);
+    //console.log(imoId);
+    await imotionPost(imoId);
     document.querySelector('#rate-your-exp').hidden = true;
     document.querySelector('#thank-you').hidden = false;
-    setTimeout(function(){ 
+    await getQuestions();
+    //console.log(questions);
+    displayQuestion(questions);
+    setTimeout(function(){
         document.querySelector('#thank-you').hidden = true;
         document.querySelector('#tell-us-more').hidden = false;
      }, 1200);
@@ -358,12 +407,12 @@ var batworldTicket = document.querySelector('#batworld-ticket');
 var batworldFeedback = document.querySelector('#batworld-feedback');
 
 //hide call
-if(false){
+if($checkpnone){
     batworldCall.hidden = true;
     adjustPosition(batworldMinimize);
 }
 //hide email
-if(false){
+if($checkemail){
     batworldEmail.hidden = true;
     adjustPosition(batworldMinimize);
     adjustPosition(batworldCall);
@@ -393,7 +442,7 @@ if(false){
     adjustPosition(batworldMinimize);
 }
 //hide ticket
-if(false){
+if($checkticket){
     batworldTicket.hidden = true;
     adjustPosition(batworldMessenger);
     adjustPosition(batworldWhatsapp);
@@ -403,7 +452,7 @@ if(false){
     adjustPosition(batworldMinimize);
 }
 //hide feedback
-if(false){
+if($checkfeedback){
     batworldFeedback.hidden = true;
     adjustPosition(batworldTicket);
     adjustPosition(batworldMessenger);

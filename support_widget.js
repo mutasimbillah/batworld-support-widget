@@ -6,8 +6,6 @@ document.head.appendChild(supportWidgetCss);
 
 //html variable
 var batworldhtml = `
-<div id="batworld">
-<!--All html inject here-->
 <!-- Support -->
 <div id="support-icon" style="left: 20px; bottom: 25px">
   <img src="icon/u25.png" alt="help" />
@@ -185,9 +183,8 @@ var batworldhtml = `
     </button>
   </form>
 </div>
-</div>
 `;
-document.body.innerHTML = document.body.innerHTML + batworldhtml; 
+document.querySelector('#batworld').innerHTML =  batworldhtml;
 
 /*---------------------API------------------------*/
 

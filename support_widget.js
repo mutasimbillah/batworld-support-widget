@@ -8,14 +8,14 @@ document.head.appendChild(supportWidgetCss);
 var batworldhtml = `
 <!-- Support -->
 <div id="support-icon" style="left: 20px; bottom: 25px">
-  <img src="icon/u25.png" alt="help" />
+  <img id="change-img" src="icon/u25.png" alt="help" />
   <p>সাহায্য</p>
 </div>
 <!-- minimize -->
 <div
   id="batworld-minimize"
   class="batworld-round-icon batworld-hide"
-  style="left: 20px; bottom: 520px"
+  style="left: 20px; bottom: 25px"
 >
   <img src="icon/minimize-2.png" alt="minimize" />
   <p>মিনিমাইজ</p>
@@ -318,6 +318,7 @@ document.querySelector('#support-icon').addEventListener('click', function() {
         for (i = 0; i < elements.length; i++) {
             elements[i].classList.toggle('batworld-hide');
         }
+    document.querySelector('#support-icon').classList.toggle('batworld-hide');
 });
 
 /*-----------------------Support End------------------------------------*/
@@ -335,6 +336,7 @@ document.querySelector('#batworld-minimize').addEventListener('click', function(
         for (i = 0; i < elements.length; i++) {
             elements[i].classList.toggle('batworld-hide');
         }
+    document.querySelector('#support-icon').classList.toggle('batworld-hide');
 });
 /*-----------------------batworld-minimize End------------------------------------*/
 
@@ -357,12 +359,11 @@ var batworldFeedback = document.querySelector('#batworld-feedback');
 //hide call
 if(false){
     batworldCall.hidden = true;
-    adjustPosition(batworldMinimize);
+    
 }
 //hide email
 if(false){
     batworldEmail.hidden = true;
-    adjustPosition(batworldMinimize);
     adjustPosition(batworldCall);
 }
 //hide skype
@@ -370,7 +371,6 @@ if(false){
     batworldSkype.hidden = true;
     adjustPosition(batworldEmail);
     adjustPosition(batworldCall);
-    adjustPosition(batworldMinimize);
 }
 //hide whatsapp
 if(false){
@@ -378,7 +378,6 @@ if(false){
     adjustPosition(batworldSkype);
     adjustPosition(batworldEmail);
     adjustPosition(batworldCall);
-    adjustPosition(batworldMinimize);
 }
 //hide messenger
 if(false){
@@ -387,7 +386,6 @@ if(false){
     adjustPosition(batworldSkype);
     adjustPosition(batworldEmail);
     adjustPosition(batworldCall);
-    adjustPosition(batworldMinimize);
 }
 //hide ticket
 if(false){
@@ -397,7 +395,6 @@ if(false){
     adjustPosition(batworldSkype);
     adjustPosition(batworldEmail);
     adjustPosition(batworldCall);
-    adjustPosition(batworldMinimize);
 }
 //hide feedback
 if(false){
@@ -408,5 +405,39 @@ if(false){
     adjustPosition(batworldSkype);
     adjustPosition(batworldEmail);
     adjustPosition(batworldCall);
-    adjustPosition(batworldMinimize);
 }
+/*------------------------------Make the DIV element draggable--------------------------------------------*/
+// Make the DIV element draggable:
+window.onload = function() {
+  // find the element that you want to drag.
+  var support = document.getElementById('support-icon');
+  
+  /* listen to the touchMove event,
+  every time it fires, grab the location
+  of touch and assign it to box */
+  
+  support.addEventListener('touchmove', function(e) {
+    // grab the location of touch
+    var touchLocation = e.targetTouches[0];
+    
+    // assign box new coordinates based on the touch.
+    support.style.left = touchLocation.pageX + 'px';
+    support.style.top = touchLocation.pageY + 'px';
+  })
+  
+}
+/*------------------------------End of Make the DIV element draggable------------------------------------------------------*/
+/*---------------------------- Change image animation -------------------------------------*/
+var icon_arr = ["icon/u7.png","icon/u13.png","icon/u16.png","icon/u19.png","icon/u22.png"];
+var iconIndex=0;
+
+function changeImage(){
+  document.getElementById("change-img").setAttribute("src", icon_arr[iconIndex]);
+  iconIndex++;
+  if(iconIndex >= icon_arr.length){
+    iconIndex=0;
+  }
+}
+
+setInterval(changeImage, 1500);
+/*--------------------------------end of change image animation --------------------------------*/

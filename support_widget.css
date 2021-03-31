@@ -51,15 +51,14 @@
   height: auto;
 }
 #support-icon {
-  position: fixed;
+  position: absolute;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  background-color: #00f;
   color: #fff;
   width: 64px;
   height: 64px;
-  border-radius: 65px;
+  border-radius: 64px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   z-index: 99999;
   transition: width 0.5s linear;
@@ -67,6 +66,7 @@
 #support-icon:hover {
   transition: width 0.5s linear;
   width: 250px;
+  background-color: #000fff;
 }
 #support-icon img {
   width: 65px;

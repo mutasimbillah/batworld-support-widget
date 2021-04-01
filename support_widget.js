@@ -8,8 +8,13 @@ document.head.appendChild(supportWidgetCss);
 var batworldhtml = `
 <!-- Support -->
 <div id="support-icon" style="left: 20px; bottom: 25px">
-  <img id="change-img" src="icon/u25.png" alt="help" />
+  <img id="change-img" src="icon/u25.png" alt="Help" />
   <p>সাহায্য</p>
+</div>
+<!-- Hide -->
+<div id="support-hide"
+ style="left: 80px; bottom: 70px">
+ <img src="icon/cancel_black.png" alt="Hide" />
 </div>
 <!-- minimize -->
 <div
@@ -319,6 +324,7 @@ document.querySelector('#support-icon').addEventListener('click', function() {
             elements[i].classList.toggle('batworld-hide');
         }
     document.querySelector('#support-icon').classList.toggle('batworld-hide');
+    document.querySelector('#support-hide').style.display = "none";
 });
 
 /*-----------------------Support End------------------------------------*/
@@ -337,6 +343,7 @@ document.querySelector('#batworld-minimize').addEventListener('click', function(
             elements[i].classList.toggle('batworld-hide');
         }
     document.querySelector('#support-icon').classList.toggle('batworld-hide');
+    document.querySelector('#support-hide').style.display = "inline";
 });
 /*-----------------------batworld-minimize End------------------------------------*/
 
@@ -406,27 +413,14 @@ if(false){
     adjustPosition(batworldEmail);
     adjustPosition(batworldCall);
 }
-/*------------------------------Make the DIV element draggable--------------------------------------------*/
-// Make the DIV element draggable:
-window.onload = function() {
-  // find the element that you want to drag.
-  var support = document.getElementById('support-icon');
-  
-  /* listen to the touchMove event,
-  every time it fires, grab the location
-  of touch and assign it to box */
-  
-  support.addEventListener('touchmove', function(e) {
-    // grab the location of touch
-    var touchLocation = e.targetTouches[0];
-    
-    // assign box new coordinates based on the touch.
-    support.style.left = touchLocation.pageX + 'px';
-    support.style.top = touchLocation.pageY + 'px';
-  })
-  
-}
-/*------------------------------End of Make the DIV element draggable------------------------------------------------------*/
+/*------------------------------Hide in mobile view--------------------------------------------*/
+//Minimize Module
+document.querySelector('#support-hide').addEventListener('click', function() {
+  document.querySelector('#support-icon').style.display = "none";
+  document.querySelector('#support-hide').style.display = "none";
+});
+
+/*------------------------------End Hide in mobile view------------------------------------------------------*/
 /*---------------------------- Change image animation -------------------------------------*/
 var icon_arr = ["icon/u7.png","icon/u13.png","icon/u16.png","icon/u19.png","icon/u22.png"];
 var iconIndex=0;

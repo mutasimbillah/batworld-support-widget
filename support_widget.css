@@ -50,8 +50,24 @@
   margin-top: 15px;
   height: auto;
 }
+#support-hide {
+  position: fixed;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  z-index: 99999;
+  display: none;
+}
+#support-hide img {
+  width: 25px;
+  height: 25px;
+}
 #support-icon {
-  position: absolute;
+  position: fixed;
   align-items: center;
   text-align: center;
   overflow: hidden;
@@ -208,5 +224,8 @@
     width: 310px !important;
     height: auto;
     padding: 5px !important;
+  }
+  #support-hide {
+    display: inline;
   }
 }

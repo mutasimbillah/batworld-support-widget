@@ -343,7 +343,9 @@ document.querySelector('#batworld-minimize').addEventListener('click', function(
             elements[i].classList.toggle('batworld-hide');
         }
     document.querySelector('#support-icon').classList.toggle('batworld-hide');
-    document.querySelector('#support-hide').style.display = "inline";
+    if(window.screen.width < 700){
+      document.querySelector('#support-hide').style.display = "inline";
+    }
 });
 /*-----------------------batworld-minimize End------------------------------------*/
 

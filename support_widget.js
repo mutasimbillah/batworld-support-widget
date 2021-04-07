@@ -12,9 +12,8 @@ var batworldhtml = `
   <p>সাহায্য</p>
 </div>
 <!-- Hide -->
-<div id="support-hide"
- style="left: 80px; bottom: 70px">
- <img src="icon/cancel_black.png" alt="Hide" />
+<div id="support-hide" style="left: 80px; bottom: 70px">
+  <img src="icon/cancel_black.png" alt="Hide" />
 </div>
 <!-- minimize -->
 <div
@@ -168,8 +167,8 @@ var batworldhtml = `
     <input
       name="email"
       type="email"
+      id="batworld-email-field"
       placeholder="Your email address (Required)"
-      required=""
       class="batworld-form-field"
       required
     />
@@ -183,7 +182,12 @@ var batworldhtml = `
       class="batworld-form-field"
       required
     />
-    <button type="button" onclick="formSubmit()" id="batworld-submit-btn" style="float: right">
+    <button
+      type="button"
+      onclick="formSubmit()"
+      id="batworld-submit-btn"
+      style="float: right"
+    >
       Submit
     </button>
   </form>
@@ -192,7 +196,16 @@ var batworldhtml = `
 document.querySelector('#batworld').innerHTML =  batworldhtml;
 
 /*---------------------API------------------------*/
-
+function formSubmit (){
+  var batEmailinput = document.getElementById("batworld-email-field").value.toLowerCase();
+  console.log(batEmailinput);
+  const batEmailValidate = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (batEmailValidate.test(batEmailinput)){
+    console.log("valid email submit form");
+  }else{
+    alert("You have entered an invalid email address!");
+  }
+}
 /*-----------------------API End--------------------*/
 /*-----------------------batworld-call------------------------------------*/
  //Hover Effect
@@ -243,8 +256,17 @@ document.querySelector('#batworld-skype').addEventListener('click', function() {
 document.querySelector('#batworld-whatsapp').addEventListener('mouseleave', function() {
     document.querySelector('#batworld-whatsapp img').hidden = false;
 });
+
+
 document.querySelector('#batworld-whatsapp').addEventListener('click', function() {
-    let win = window.open('https://api.whatsapp.com/send?phone=+8801755676727', '_blank');
+  let batworldWhatsAppNumber = +8801765951292;
+  let batworldWhatsAppMsg = "Hello World";
+  let batworldWhatsAppSrc = 'http://localhost/';
+  
+  
+  let win = window.open('https://api.whatsapp.com/send?phone='+batworldWhatsAppNumber+
+                        '&text=%20'+batworldWhatsAppMsg+
+                        ' Source: ' + batworldWhatsAppSrc , '_blank');
     win.focus();
 });
 /*-----------------------batworld-whatsapp end------------------------------------*/
@@ -437,3 +459,31 @@ function changeImage(){
 
 setInterval(changeImage, 1500);
 /*--------------------------------end of change image animation --------------------------------*/
+function requestServerForJS() {
+  var s1 = document.createElement("script");
+  var url =
+    "https://testapi-k8s.oss.net.bd/api/feedback-service/contact-widget/get-js?clientId=b54aa8cb-b96e-43e6-bbd0-59f26cdf4f67";
+  s1.setAttribute("src", url);
+  document.body.appendChild(s1);
+}
+
+function batworldCheckApi() {
+  var checkUrl =
+    "https://testapi-k8s.oss.net.bd/api/feedback-service/contact-widget/reload-js";
+  var apiOptions = {
+    method: "GET",
+    headers: {
+      "client-id": "b54aa8cb-b96e-43e6-bbd0-59f26cdf4f67",
+    },
+    referer: "https://clo-stage.land.gov.bd",
+  };
+  fetch(checkUrl, apiOptions)
+    .then((response) => response)
+    .then((data) => {
+      if (data.relaod === true) {
+        requestServerForJS();
+      }
+    });
+}
+
+setInterval(batworldCheckApi, 5000);

@@ -22,7 +22,8 @@ function batworldCheckApi() {
         data = {
           relaod: false,
         };
-        console.log(data.relaod);
+        data = JSON.parse(data);
+        console.log(typeof(data.reload));
         if (data.relaod === true) {
           requestServerForJS();
         }

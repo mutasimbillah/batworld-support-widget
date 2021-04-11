@@ -192,6 +192,8 @@ var batworldhtml = `
     </button>
   </form>
 </div>
+<div hidden id="batworld-popup">
+</div>
 `;
 document.querySelector('#batworld').innerHTML =  batworldhtml;
 
@@ -207,6 +209,16 @@ function formSubmit (){
   }
 }
 /*-----------------------API End--------------------*/
+function batworldPopup(msg){
+  var popup = document.querySelector('#batworld-popup');
+  popHtml = "<p>" + msg + "!</p>";
+  popup.innerHTML = popHtml;
+  popup.hidden = false;
+   setTimeout(function(){ 
+       document.querySelector('#batworld-popup').hidden = true;
+    }, 2000);
+}
+
 /*-----------------------batworld-call------------------------------------*/
  //Hover Effect
  document.querySelector('#batworld-call').addEventListener('mouseenter', function() {
@@ -259,15 +271,18 @@ document.querySelector('#batworld-whatsapp').addEventListener('mouseleave', func
 
 
 document.querySelector('#batworld-whatsapp').addEventListener('click', function() {
-  let batworldWhatsAppNumber = +8801765951292;
-  let batworldWhatsAppMsg = "Hello World";
-  let batworldWhatsAppSrc = 'http://localhost/';
+  batworldPopup("From 10 am to 5pm only");
+  setTimeout(function(){ 
+    let batworldWhatsAppNumber = +8801765951292;
+    let batworldWhatsAppMsg = "Hello World";
+    let batworldWhatsAppSrc = 'http://localhost/';
   
-  
-  let win = window.open('https://api.whatsapp.com/send?phone='+batworldWhatsAppNumber+
+    let win = window.open('https://api.whatsapp.com/send?phone='+batworldWhatsAppNumber+
                         '&text=%20'+batworldWhatsAppMsg+
                         ' Source: ' + batworldWhatsAppSrc , '_blank');
     win.focus();
+ }, 2000);
+  
 });
 /*-----------------------batworld-whatsapp end------------------------------------*/
 /*-----------------------batworld-messenger------------------------------------*/
@@ -459,31 +474,3 @@ function changeImage(){
 
 setInterval(changeImage, 1500);
 /*--------------------------------end of change image animation --------------------------------*/
-function requestServerForJS() {
-  var s1 = document.createElement("script");
-  var url =
-    "https://testapi-k8s.oss.net.bd/api/feedback-service/contact-widget/get-js?clientId=b54aa8cb-b96e-43e6-bbd0-59f26cdf4f67";
-  s1.setAttribute("src", url);
-  document.body.appendChild(s1);
-}
-
-function batworldCheckApi() {
-  var checkUrl =
-    "https://testapi-k8s.oss.net.bd/api/feedback-service/contact-widget/reload-js";
-  var apiOptions = {
-    method: "GET",
-    headers: {
-      "client-id": "b54aa8cb-b96e-43e6-bbd0-59f26cdf4f67",
-    },
-    referer: "https://clo-stage.land.gov.bd",
-  };
-  fetch(checkUrl, apiOptions)
-    .then((response) => response)
-    .then((data) => {
-      if (data.relaod === true) {
-        requestServerForJS();
-      }
-    });
-}
-
-setInterval(batworldCheckApi, 5000);
